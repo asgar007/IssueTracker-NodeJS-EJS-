@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="/css/project-form.css">
-
+<br>
+<h2 style="margin-left: 450px;"> Create Issue/Bug for <u style="color: red;"><%= project.name %> </u></h2> 
   <div class="form-container">
+    
     <form action="/project/issue-form" method="POST">
-        <h2>Create Issue/Bug</h2>
+         
       <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required>
@@ -17,6 +19,8 @@
       </div>
       <div class="form-group">
         <button type="submit">Submit</button>
+        <a class="form-group" href="/project/details" style="margin-left: 230px; background-color: rgb(216, 114, 114); padding: 10px 20px; color: white; border-radius: 5px;">Back</a>
       </div>
     </form>
+
   </div>

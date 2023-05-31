@@ -1,5 +1,28 @@
 <link rel="stylesheet" href="/css/project-details.css">
 <br>
+<button type="button" class="btn btn-primary ml-5" data-toggle="modal" data-target=".bd-example-modal-sm">Filter</button>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content" style="padding: 10px;">
+        <form action="/project/refine" method="post">
+            <input type="radio" id="html" name="radioName" value="name">
+            <label for="html">Title</label><br>
+            <input type="radio" id="css" name="radioName" value="description">
+            <label for="css">Description</label><br>
+            <input type="radio" id="javascript" name="radioName" value="author">
+            <label for="javascript">Author</label>
+            <!-- <button type="submit" class="btn btn-primary">Refine</button> -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Refine</button>
+            </div>
+        </form> 
+        
+      </div>
+    </div>
+</div>
+
 <% for(let project of projects) { %>
 
     <div class="card">

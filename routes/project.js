@@ -13,5 +13,6 @@ router.post('/create', projectController.create);
 router.get('/details', projectController.projectDetails);
 router.get('/create-issue/:id', projectController.createForm);
 router.post('/issue-form', projectController.fillForm);
+router.post('/refine', projectController.filter);
 
 module.exports = router; 
