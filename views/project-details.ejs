@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/project-details.css">
+<br>
+<% for(let project of projects) { %>
+
+    <div class="card">
+        <h2>Project:  <%= project.name %> </h2>
+        <p><b>Description: </b> <%= project.description %></p>
+        <h6>Author: <%= project.author %></h6>
+        <% for(let issue of issues) { %>
+        
+            <% if(issue.project == project.id) { %>
+                <h6 style="color: red;">Bugs: </h6>
+                <p> Title: <%= issue.title %> </p>
+                <p> Description: <%= issue.description %> </p>
+                <p> Author: <%= issue.author %> </p>
+            <% } %>
+        <% } %>
+        
+        <a href="/project/create-issue/<%= project.id %>" style="color: blue;" >Create Issue/Bug</a>
+    </div>
+
+<% } %>

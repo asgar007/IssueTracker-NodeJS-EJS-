@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="css/home.css">
+<br><br>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Add New Project</h5>
+      <a href="project" class="card-link">Click Here</a>
+    </div>
+</div>
+
+<div class="card-container">
+  
+<% for(project of projects){ %>
+    <div class="card">
+      <span>Project Name: </span>
+      <h3> <%= project.name %> </h3>
+      <!-- <p>Description: <%= project.description%></p> -->
+      <h6>Author: <%= project.author%></h6>
+      <a href="project/details">Details</a>
+    </div>
+<% } %>
+
+</div>
+

@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin: 20px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}

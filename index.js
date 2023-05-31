@@ -1,6 +1,7 @@
 const express = require('express');
 const port = 8002;
 const app = express();
+const cookieParser = require('cookie-parser');
 //use express layout
 const expressLayout = require('express-ejs-layouts');
 const db = require('./config/mongoose');
@@ -8,7 +9,12 @@ const db = require('./config/mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 app.use(expressLayout);
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cookieParser());
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 //use static folder
 app.use(express.static('./assets'));
