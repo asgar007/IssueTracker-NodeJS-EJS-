@@ -67,6 +67,9 @@ module.exports.fillForm = async (req, res) => {
                 title: req.body.title,
                 description: req.body.description,
                 author: req.body.author,
+                // labels: [
+                //     req.body.labels
+                // ],
                 project: projectId
                 // project: req.project._id
             });
